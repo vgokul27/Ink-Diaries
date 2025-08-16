@@ -7,7 +7,10 @@ export const verifyToken = async (req, res, next) => {
 
   try {
     const decoded = await admin.auth().verifyIdToken(token);
-    req.user = { uid: decoded.uid, email: decoded.email || null };
+    req.user = {
+      uid: decoded.uid,
+      email: decoded.email || null
+    };
     next();
   } catch (err) {
     return res.status(401).json({ message: "Invalid/expired token" });

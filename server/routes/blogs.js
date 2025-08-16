@@ -1,6 +1,7 @@
 import express from "express";
 import Blog from "../models/Blog.js";
 import { verifyToken } from "../middleware/auth.js";
+import admin from "../firebase.js";
 
 const router = express.Router();
 
@@ -39,9 +40,29 @@ router.get("/:id", async (req, res) => {
 router.post("/", verifyToken, async (req, res) => {
   try {
     const { title, content, image } = req.body;
-    const blog = await Blog.create({ title, content, image, authorUid: req.user.uid });
+
+    // Fetch user details from Firebase to get display name
+    let authorName = 'Anonymous';
+    try {
+      const userRecord = await admin.auth().getUser(req.user.uid);
+      authorName = userRecord.displayName ||
+                   (userRecord.email ? userRecord.email.split('@')[0] : 'Anonymous');
+    } catch (userError) {
+      console.log('Could not fetch user details:', userError.message);
+      // Fallback to email from token if available
+      authorName = req.user.email ? req.user.email.split('@')[0] : 'Anonymous';
+    }
+
+    const blog = await Blog.create({
+      title,
+      content,
+      image,
+      authorUid: req.user.uid,
+      authorName: authorName
+    });
     res.status(201).json(blog);
-  } catch {
+  } catch (error) {
+    console.error('Error creating blog:', error);
     res.status(400).json({ message: "Invalid payload" });
   }
 });

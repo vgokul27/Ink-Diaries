@@ -6,6 +6,7 @@ const BlogSchema = new mongoose.Schema(
         content: { type: String, required: true },
         image: { type: String, default: "" },
         authorUid: { type: String, required: true },
+        authorName: { type: String, required: true },
         favorites: [{ type: String }],
     },
     { timestamps: true }
