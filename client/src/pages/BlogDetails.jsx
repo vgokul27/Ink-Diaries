@@ -133,12 +133,11 @@ export default function BlogDetails() {
             <motion.img
               src={blog.image}
               alt={blog.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
               initial={{ scale: 1.1 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1.2 }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
             {/* Floating Action Buttons */}
             <motion.div
@@ -215,7 +214,7 @@ export default function BlogDetails() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="relative -mt-20 z-10"
+        className="relative mt-8 z-10"
       >
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
