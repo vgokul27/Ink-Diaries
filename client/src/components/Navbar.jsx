@@ -43,12 +43,12 @@ export default function Navbar() {
                             className="flex items-center space-x-3 group"
                         >
                             <div className="relative">
-                                <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-                                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 2C7.45 2 7 2.45 7 3V4H6C5.45 4 5 4.45 5 5V6C5 6.55 5.45 7 6 7H7V8C7 8.55 7.45 9 8 9H16C16.55 9 17 8.55 17 8V7H18C18.55 7 19 6.55 19 6V5C19 4.45 18.55 4 18 4H17V3C17 2.45 16.55 2 16 2H8ZM8 4H16V6H8V4ZM7 9V20C7 21.1 7.9 22 9 22H15C16.1 22 17 21.1 17 20V9H15V20H9V9H7Z"/>
-                                        <circle cx="12" cy="15" r="1.5" fill="currentColor"/>
-                                        <path d="M10 12H14V13H10V12Z" fill="currentColor"/>
-                                    </svg>
+                                <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 overflow-hidden">
+                                    <img
+                                        src="https://www.creativefabrica.com/wp-content/uploads/2018/11/Feather-logo-vector-by-DEEMKA-STUDIO-1.jpg"
+                                        alt="Feather Logo"
+                                        className="w-15 h-15 object-contain"
+                                    />
                                 </div>
                                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
                             </div>
@@ -56,9 +56,6 @@ export default function Navbar() {
                                 <h1 className="text-2xl font-bold text-white tracking-tight">
                                     Ink Diaries
                                 </h1>
-                                <p className="text-blue-100 text-xs font-medium">
-                                    Share Your Story
-                                </p>
                             </div>
                         </Link>
                     </motion.div>
