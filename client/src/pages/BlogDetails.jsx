@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import api from "../utils/api";
 import { useAuth } from "../context/AuthContext";
+import Footer from "../components/Footer";
 
 export default function BlogDetails() {
   const { id } = useParams();
@@ -416,6 +417,8 @@ export default function BlogDetails() {
           </div>
         </motion.section>
       )}
+
+      <Footer />
     </div>
   );
 }

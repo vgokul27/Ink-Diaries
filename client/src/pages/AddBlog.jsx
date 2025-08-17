@@ -55,8 +55,7 @@ export default function AddBlog() {
             Create Your Story
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Share your thoughts, experiences, and insights with the world.
-            Every great story starts with a single word.
+            " Fill the page with the ink of your imagination "
           </p>
         </motion.div>
 

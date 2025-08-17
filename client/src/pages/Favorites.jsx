@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../utils/api";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import Footer from "../components/Footer";
 
 export default function Favorites() {
   const [blogs, setBlogs] = useState([]);
@@ -246,6 +247,8 @@ export default function Favorites() {
           )}
         </div>
       </motion.section>
+
+      <Footer />
     </div>
   );
 }

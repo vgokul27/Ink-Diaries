@@ -3,6 +3,7 @@ import api from "../utils/api";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "../context/AuthContext";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
@@ -242,6 +243,8 @@ export default function Home() {
           )}
         </div>
       </motion.section>
+
+      <Footer />
     </div>
   );
 }
