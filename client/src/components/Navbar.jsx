@@ -47,7 +47,7 @@ export default function Navbar() {
                                     <img
                                         src="https://www.creativefabrica.com/wp-content/uploads/2018/11/Feather-logo-vector-by-DEEMKA-STUDIO-1.jpg"
                                         alt="Feather Logo"
-                                        className="w-15 h-15 object-contain"
+                                        className="w-14 h-14 object-contain"
                                     />
                                 </div>
                                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>

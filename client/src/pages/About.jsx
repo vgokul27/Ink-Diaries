@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 export default function About() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="max-w-4xl mx-auto p-6"
-    >
+    <div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-4xl mx-auto p-6"
+      >
       <div className="prose prose-lg mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
           About Ink Diaries
@@ -80,12 +82,10 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-gray-600">
-            Built with ❤️ using React, Tailwind CSS, and Firebase
-          </p>
-        </div>
       </div>
-    </motion.div>
+      </motion.div>
+
+      <Footer />
+    </div>
   );
 }
