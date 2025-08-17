@@ -12,7 +12,7 @@ const app = express();
 await connectDB();
 
 //Middleware
-app.use(cors({ origin: ["http://localhost:5173", "https://your-frontend.vercel.app"], credentials: true }));
+app.use(cors({ origin: ["http://localhost:5173", "https://ink-diaries.vercel.app"], credentials: true }));
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json());
